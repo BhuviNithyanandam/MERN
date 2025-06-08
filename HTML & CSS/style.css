@@ -1,0 +1,258 @@
+/* Universal and Element Selectors */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+/* ID and Class Selectors */
+#main-title {
+  color: teal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Box Model */
+.box {
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #444;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout and Positioning - Advanced Demo */
+.position-demo {
+  margin-top: 40px;
+}
+
+.position-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #e3f2fd;
+  border: 2px solid #2196f3;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.box-child {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: #90caf9;
+  border: 1px solid #0d47a1;
+  color: #0d47a1;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Transition and Animation Demo */
+.transition-animation-demo {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Transition Example */
+.transition-box {
+  width: 150px;
+  height: 100px;
+  background-color: #aed581;
+  margin: 20px auto 40px;
+  line-height: 100px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.transition-box:hover {
+  background-color: #558b2f;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Animation Example */
+.animated-box {
+  width: 150px;
+  height: 100px;
+  background-color: #f06292;
+  margin: 20px auto;
+  line-height: 100px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes for Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Transform Demo */
+.transform-demo {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.transform-box {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: 10px;
+  background-color: #ffe082;
+  border: 2px solid #ff6f00;
+  line-height: 80px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* Each transform on hover */
+.transform-box.translate:hover {
+  transform: translateX(30px);
+}
+
+.transform-box.scale:hover {
+  transform: scale(1.2);
+}
+
+.transform-box.rotate:hover {
+  transform: rotate(15deg);
+}
+
+.transform-box.skew:hover {
+  transform: skewX(15deg);
+}
+
+.transform-box.combined:hover {
+  transform: translateY(-10px) scale(1.1) rotate(5deg);
+}
+
+.flexbox-lab {
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.flexbox-lab h3 {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #4a148c;
+}
+
+/* Base container */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f3e5f5;
+  border: 1px dashed #7b1fa2;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+}
+
+/* Flex items */
+.flex-item {
+  background-color: #ce93d8;
+  color: #4a148c;
+  padding: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* 1. Space between */
+.space-between {
+  justify-content: space-between;
+}
+
+/* 2. Column layout */
+.column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 3. Wrap */
+.wrap {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* 4. Flex Grow */
+.grow .grow-1 {
+  flex-grow: 1;
+}
+
+.grow .grow-2 {
+  flex-grow: 2;
+}
+
+/* Responsive Design */
+.responsive-box {
+  background-color: #cce5ff;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: #f8d7da;
+  }
+
+  .box {
+    width: 90%;
+  }
+
+  #main-title {
+    font-size: 24px;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: #666;
+}
