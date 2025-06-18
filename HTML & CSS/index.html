@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Demo Project</title>
+  <title>HTML & CSS Demo Project</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -97,10 +97,35 @@
       <h2>Responsive Box</h2>
       <div class="responsive-box">Resize the screen to see the effect.</div>
     </section>
+
+    <section class="js-dom-demo">
+      <h2>JavaScript DOM Demo</h2>
+      <button id="add-btn">Add Message</button>
+      <div id="message-container">
+      </div>
+    </section>
+    
   </main>
 
   <footer>
     <p>&copy; 2025 CSS Demo. All rights reserved.</p>
   </footer>
 </body>
+
+<script>
+  const button = document.getElementById('add-btn');
+  console.log('button',button);
+  const container = document.getElementById('message-container');
+  console.log('container--->',container);
+
+  button.addEventListener('click', () => {
+    const newMessage = document.createElement('div');
+    console.log('newMessage element--->',newMessage);
+    newMessage.textContent = 'This message was added using JavaScript!';
+    newMessage.style.color = '#4a148c';
+    newMessage.style.fontWeight = 'bold';
+    container.appendChild(newMessage);
+  });
+</script>
+
 </html>
