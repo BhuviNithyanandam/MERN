@@ -1,0 +1,43 @@
+.gallery-wrapper {
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0077b6;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .food-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 160px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .food-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .food-card h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .food-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
