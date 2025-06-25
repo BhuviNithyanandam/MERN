@@ -1,0 +1,29 @@
+.basic-event-wrapper {
+    background-color: #f5faff;
+    border: 1px solid #bde0fe;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .basic-event-wrapper button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .basic-event-wrapper button:hover {
+    background-color: #0096c7;
+  }
+  
+  .basic-event-wrapper p {
+    margin-top: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  

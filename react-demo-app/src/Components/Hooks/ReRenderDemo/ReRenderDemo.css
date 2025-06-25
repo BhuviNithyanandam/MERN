@@ -1,0 +1,32 @@
+.re-render-wrapper {
+    background-color: #f3f0ff;
+    border: 1px solid #d0bfff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .section {
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #845ef7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #5f3dc4;
+  }
+  
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px dashed #ccc;
+  }
+  
