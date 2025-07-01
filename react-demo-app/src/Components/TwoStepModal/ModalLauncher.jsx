@@ -6,7 +6,7 @@ const ModalLauncher = () => {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} style={{"margin-top": "20px"}}>Open Modal</button>
+      <button onClick={() => setShowModal(true)} style={{"margin": "20px"}}>Open Modal</button>
       {showModal && <TwoStepModal onClose={() => setShowModal(false)} />}
     </>
   );

@@ -7,7 +7,7 @@ import ReRenderDemo from './Components/Hooks/ReRenderDemo/ReRenderDemo';
 import UseEffectWithoutDeps from './Components/Hooks/UseEffectWithoutDeps/UseEffectWithoutDeps';
 import UseEffectWithDeps from './Components/Hooks/UseEffectWithDeps/UseEffectWithDeps';
 import UseRef from './Components/Hooks/UseRef/UseRef';
-import ModalLauncher from './Components/TwoStepModal/ModalLauncher';
+import StateManagement from './Components/StateManagement/StateManagement';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
       <UseEffectWithoutDeps />
       <UseEffectWithDeps />
       <UseRef />
-      <ModalLauncher />
+      <StateManagement />
     </div>
   );
 };

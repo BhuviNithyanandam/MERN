@@ -20,6 +20,7 @@ const UseRef = () => {
 
   return (
     <div className="dropdown-container">
+      <h2> useRef </h2>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Dropdown ⬇️</button>
       {isOpen && (
         <div className="dropdown" ref={dropdownRef}>
