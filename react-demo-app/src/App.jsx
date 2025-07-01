@@ -1,28 +1,26 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './pages/Home';
+import EventHandling from './pages/EventHandling';
+import StateEffects from './pages/StateEffects';
+import StateManagementPage from './pages/StateManagementPage';
+import FoodDetail from './pages/FoodDetail';
 import './App.css';
-import JSXComponentsDemo from './Components/JSXComponentsPropsDemo/JSXComponentsPropsDemo';
-import FoodGallery from './Components/FoodGallery';
-import BasicEventDemo from './Components/BasicEventHandling/BasicEventDemo';
-import UseStateDemo from './Components/Hooks/useStateDemo/ UseStateDemo';
-import ReRenderDemo from './Components/Hooks/ReRenderDemo/ReRenderDemo';
-import UseEffectWithoutDeps from './Components/Hooks/UseEffectWithoutDeps/UseEffectWithoutDeps';
-import UseEffectWithDeps from './Components/Hooks/UseEffectWithDeps/UseEffectWithDeps';
-import UseRef from './Components/Hooks/UseRef/UseRef';
-import StateManagement from './Components/StateManagement/StateManagement';
 
 const App = () => {
   return (
-    <div className="app-container">
-      <h1 className="app-title">React Demo Showcase</h1>
-      <JSXComponentsDemo />
-      <FoodGallery />
-      <BasicEventDemo />
-      <UseStateDemo />
-      <ReRenderDemo />
-      <UseEffectWithoutDeps />
-      <UseEffectWithDeps />
-      <UseRef />
-      <StateManagement />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<EventHandling />} />
+          <Route path="/state-effects" element={<StateEffects />} />
+          <Route path="/state-management" element={<StateManagementPage />} />
+          <Route path="/food/:id" element={<FoodDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

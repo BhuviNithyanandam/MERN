@@ -6,8 +6,8 @@ const EffectWithoutDeps = () => {
   const [effectRuns, setEffectRuns] = useState(0);
 
   useEffect(() => {
-    setEffectRuns((prev) => prev + 1); //This runs infinitely, to avoid give empty dependency array [] this will run only on mount.
-  });
+    setEffectRuns((prev) => prev + 1); //This runs infinitely, without giving empty dependency array [].
+  },[]);
 
   return (
     <div className="effect-box">
