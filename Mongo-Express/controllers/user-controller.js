@@ -1,13 +1,6 @@
 const User = require('../models/user-model');
 const Post = require('../models/post-model');
 
-// Create User
-exports.createUser = async (req, res) => {
-  const user = new User(req.body);
-  const result = await user.save();
-  res.json(result);
-};
-
 // Get All Users
 exports.getUsers = async (req, res) => {
   const users = await User.find();
@@ -22,8 +15,27 @@ exports.getUserById = async (req, res) => {
 
 // Update User
 exports.updateUser = async (req, res) => {
-  const updated = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(updated);
+  try {
+    const userIdFromToken = req.user.id; // decoded from JWT middleware
+    const { name } = req.body;
+
+    if (!name) {
+      return res.status(400).json({ message: 'Name is required to update' });
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userIdFromToken,
+      { name },
+      { new: true, runValidators: true }
+    );
+
+    res.json({
+      message: 'User updated successfully',
+      user: { name: updatedUser.name },
+    });
+  } catch (err) {
+    res.status(500).json({ message: 'Update failed', error: err.message });
+  }
 };
 
 // Delete User
@@ -46,7 +58,7 @@ exports.createPost = async (req, res) => {
 
 // Get Posts of a User with .populate()
 exports.getUserPosts = async (req, res) => {
-  const posts = await Post.find({ user: req.params.userId }).populate('user', 'name email');
+  const posts = await Post.find({ user: req.params.userId }).populate('user', 'name');
   res.json(posts);
 };
 
